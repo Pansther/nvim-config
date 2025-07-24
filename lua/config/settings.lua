@@ -1,4 +1,4 @@
--- ~/nvim/lua/slydragonn/settings.lua
+-- ~/nvim/lua/config/settings.lua
 
 local global = vim.g
 local o = vim.opt
