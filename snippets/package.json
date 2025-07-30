@@ -1,0 +1,14 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./cssm.json"
+      }
+    ]
+  }
+}

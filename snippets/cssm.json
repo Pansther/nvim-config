@@ -1,0 +1,37 @@
+{
+  "import SCSS Module": {
+    "prefix": "cssm",
+    "body": [
+      "import styles from './styles.module.scss';"
+    ],
+    "description": "Import CSS Module"
+  },
+  "import clsx as cx": {
+    "prefix": "impcx",
+    "body": [
+      "import cx from 'clsx';"
+    ],
+    "description": "import clsx as cx"
+  },
+  "import index SCSS Module": {
+    "prefix": "scss",
+    "body": [
+      "import styles from './index.module.scss';"
+    ],
+    "description": "Import CSS Module as index"
+  },
+  "import classNames": {
+    "prefix": "impcls",
+    "body": [
+      "import classNames from 'classnames';"
+    ],
+    "description": "import classNames"
+  },
+  "import styled": {
+    "prefix": "sty",
+    "body": [
+      "import styled from 'styled-components';"
+    ],
+    "description": "import styled-components"
+  }
+}
