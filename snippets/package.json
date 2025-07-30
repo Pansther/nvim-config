@@ -8,6 +8,14 @@
           "typescriptreact"
         ],
         "path": "./cssm.json"
+      },
+      {
+        "language": [
+          "javascript",
+          "typescript",
+          "typescriptreact"
+        ],
+        "path": "./react.json"
       }
     ]
   }
