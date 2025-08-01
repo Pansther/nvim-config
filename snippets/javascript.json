@@ -1,0 +1,23 @@
+{
+  "console_log_value": {
+    "prefix": "clg",
+    "body": [
+      "console.log($1)"
+    ],
+    "description": "console.log only value"
+  },
+  "console_log_key": {
+    "prefix": "clo",
+    "body": [
+      "console.log('$1', $2)"
+    ],
+    "description": "console.log with key & value"
+  },
+  "console_dir": {
+    "prefix": "dir",
+    "body": [
+      "console.dir($1, { depth: 10 })"
+    ],
+    "description": "console.log with key & value"
+  }
+}

@@ -5,6 +5,9 @@ return {
   opts = {
     servers = {
       cssmodules_ls = {},
+      tsserver = {},
     },
+
+    inlay_hints = { enabled = false },
   },
 }
