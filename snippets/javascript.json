@@ -9,7 +9,7 @@
   "console_log_key": {
     "prefix": "clo",
     "body": [
-      "console.log('$1', $2)"
+      "console.log('${1:key}', $1$2);"
     ],
     "description": "console.log with key & value"
   },
