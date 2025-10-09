@@ -3,6 +3,8 @@
     "snippets": [
       {
         "language": [
+          "js",
+          "ts",
           "javascript",
           "typescript",
           "typescriptreact"
@@ -11,6 +13,8 @@
       },
       {
         "language": [
+          "js",
+          "ts",
           "javascript",
           "typescript",
           "typescriptreact"
@@ -19,6 +23,8 @@
       },
       {
         "language": [
+          "js",
+          "ts",
           "javascript",
           "typescript",
           "typescriptreact"
