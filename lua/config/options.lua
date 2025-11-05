@@ -13,3 +13,24 @@ vim.api.nvim_create_autocmd("VimEnter", {
     end
   end,
 })
+
+vim.diagnostic.config({
+  float = {
+    source = "always", -- แสดงชื่อ source (เช่น 'eslint', 'tsserver') เสมอ
+    border = "rounded", -- รูปแบบของขอบ: 'single', 'double', 'rounded'
+    focusable = false, -- ไม่ให้โฟกัสที่ floating window
+    header = "", -- ข้อความ Header
+  },
+})
+
+vim.api.nvim_create_autocmd("CursorHold", {
+  callback = function()
+    -- เปิด floating window แสดง diagnostic ที่ตำแหน่งเคอร์เซอร์
+    vim.diagnostic.open_float({
+      -- ให้แสดงเฉพาะ diagnostic ของบรรทัดปัจจุบัน
+      scope = "cursor",
+    })
+  end,
+  -- ให้ทำงานกับ buffer ที่เปิดใช้งาน LSP
+  group = vim.api.nvim_create_augroup("DiagnosticFloat", { clear = true }),
+})
