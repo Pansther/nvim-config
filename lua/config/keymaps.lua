@@ -6,7 +6,7 @@ vim.keymap.set("i", "jk", "<Esc>", { desc = "Exit Insert Mode" })
 vim.keymap.set("i", "kj", "<Esc>", { desc = "Exit Insert Mode" })
 vim.keymap.set("i", "<C-z>", "<C-o>u", { desc = "Undo in insert mode" })
 vim.keymap.set("i", "<C-y>", "<C-o><C-r>", { desc = "Redo in insert mode" })
-vim.keymap.set({ "i", "n", "v" }, "<C-a>", '<Esc>ggVG"+y', { desc = "Copy all file" })
+vim.keymap.set("n", "<C-A>", '<Esc>ggVG"+y', { desc = "Copy all file" })
 
 vim.keymap.set("n", "K", function()
   if vim.lsp.get_clients() then
