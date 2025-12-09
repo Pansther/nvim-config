@@ -35,6 +35,16 @@ return {
       mc.matchSkipCursor(-1)
     end, { desc = "Previous Match Skip Cursor" }) -- เพิ่ม desc ตรงนี้
 
+    -- bring back cursors if you accidentally clear them
+    set("n", "<leader>gv", mc.restoreCursors)
+
+    -- Add a cursor for all matches of cursor word/selection in the document.
+    set({ "n", "x" }, "<leader>A", mc.matchAllAddCursors)
+
+    -- Increment/decrement sequences, treaing all cursors as one sequence.
+    set({ "n", "x" }, "g<c-a>", mc.sequenceIncrement)
+    set({ "n", "x" }, "g<c-x>", mc.sequenceDecrement)
+
     -- Add and remove cursors with control + left click.
     set("n", "<c-leftmouse>", mc.handleMouse, { desc = "Multicursor: Add/Remove with Click" }) -- เพิ่ม desc ตรงนี้
     set("n", "<c-leftdrag>", mc.handleMouseDrag, { desc = "Multicursor: Add/Remove with Drag" }) -- เพิ่ม desc ตรงนี้
