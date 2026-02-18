@@ -34,3 +34,5 @@ vim.api.nvim_create_autocmd("CursorHold", {
   -- ให้ทำงานกับ buffer ที่เปิดใช้งาน LSP
   group = vim.api.nvim_create_augroup("DiagnosticFloat", { clear = true }),
 })
+
+vim.g.snacks_animate = false
