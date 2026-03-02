@@ -41,6 +41,11 @@ return {
     -- Add a cursor for all matches of cursor word/selection in the document.
     set({ "n", "x" }, "<leader>A", mc.matchAllAddCursors)
 
+    -- Append/insert for each line of visual selections.
+    -- Similar to block selection insertion.
+    set("x", "I", mc.insertVisual)
+    set("x", "A", mc.appendVisual)
+
     -- Increment/decrement sequences, treaing all cursors as one sequence.
     set({ "n", "x" }, "g<c-a>", mc.sequenceIncrement)
     set({ "n", "x" }, "g<c-x>", mc.sequenceDecrement)
