@@ -1,4 +1,11 @@
 return {
-  "nvim-treesitter/nvim-ts-autotag",
-  enabled = false,
+  "nvim-treesitter/nvim-treesitter",
+  dependencies = {
+    "windwp/nvim-ts-autotag",
+  },
+  opts = {
+    autotag = {
+      enable = true,
+    },
+  },
 }
