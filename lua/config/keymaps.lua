@@ -19,3 +19,10 @@ vim.keymap.set("n", "K", function()
     vim.diagnostic.open_float({})
   end
 end, { desc = "LSP/Diagnostic Hover/Float" })
+
+vim.keymap.set("n", "<leader>cu", function()
+  vim.lsp.buf.code_action({
+    apply = true,
+    context = { only = { "source.removeUnused.ts" }, diagnostics = {} },
+  })
+end, { desc = "Remove Unused Imports" })
