@@ -14,6 +14,7 @@ vim.keymap.set("v", "<C-k>", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
 vim.keymap.set("v", "<leader>y", '"+y', { desc = "Yank to system clipboard" })
 vim.keymap.set("n", "<leader>p", '"+p', { desc = "Paste from system clipboard" })
+vim.keymap.set("i", "<C-v>", "<C-r>0", { desc = "Paste latest yank" })
 
 vim.keymap.set("n", "K", function()
   if vim.lsp.get_clients() then
