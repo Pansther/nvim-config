@@ -30,3 +30,10 @@ vim.keymap.set("n", "<leader>cu", function()
     context = { only = { "source.removeUnused.ts" }, diagnostics = {} },
   })
 end, { desc = "Remove Unused Imports" })
+
+vim.keymap.set("n", "<leader>r", ":source $MYVIMRC<CR>:lua print('Config Reloaded!')<CR>", { desc = "Reload Config" })
+
+vim.keymap.set("n", "<leader>cv", function()
+  vim.fn.system("code .")
+  vim.notify("Opening VS Code in the current directory...", vim.log.levels.INFO, { title = "VS Code" })
+end, { desc = "Open VS Code" })

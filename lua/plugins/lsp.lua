@@ -6,6 +6,7 @@ return {
     servers = {
       cssmodules_ls = {},
       tsserver = {},
+      gdscript = {},
     },
 
     inlay_hints = { enabled = false },
