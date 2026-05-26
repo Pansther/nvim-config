@@ -37,4 +37,4 @@ vim.api.nvim_create_autocmd("CursorHold", {
 
 vim.g.snacks_animate = false
 
-vim.opt.clipboard = ""
+-- vim.opt.clipboard = ""
