@@ -20,7 +20,7 @@ local function validate(value)
     if value.command == "" then error("codex.nvim: command must not be empty") end
     return
   end
-  if type(value.command) ~= "table" or #value.command == 0 then
+  if type(value.command) ~= "table" or not vim.islist(value.command) or #value.command == 0 then
     error("codex.nvim: command must be a non-empty string or list")
   end
   for _, part in ipairs(value.command) do
