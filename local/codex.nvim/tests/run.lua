@@ -97,6 +97,21 @@ it("does not open a split when Codex is missing", function()
   eq(fake.calls.notifications[1].level, vim.log.levels.ERROR)
 end)
 
+it("sends after scheduling even when the job exits", function()
+  local running, scheduled = true, nil
+  local fake = fake_runtime({
+    job_running = function() return running end,
+    schedule = function(fn) scheduled = fn end,
+  })
+  terminal._reset()
+  terminal._set_runtime(fake)
+  eq(terminal.send({ command = "codex", width = 0.4 }, "hello\n"), true)
+  running = false
+  scheduled()
+  eq(#fake.calls.sends, 1)
+  eq(fake.calls.sends[1], { job = 41, text = "hello\n" })
+end)
+
 terminal._reset()
 if #failures > 0 then error(table.concat(failures, "\n")) end
 print(("ok - %d tests"):format(total))

@@ -115,7 +115,7 @@ end
 function M.send(config, text)
   if not M.ensure(config) then return false end
   runtime.schedule(function()
-    if state.job and runtime.job_running(state.job) then runtime.send(state.job, text) end
+    runtime.send(state.job, text)
   end)
   if valid_win() then vim.api.nvim_set_current_win(state.win) end
   return true
